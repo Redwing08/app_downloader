@@ -8,7 +8,7 @@ function Hero() {
       }}
     >
       <h1 className="display-4 fw-bold">
-        Company App Store
+        COMPANY APP DOWNLOADER
       </h1>
 
       <p className="lead">

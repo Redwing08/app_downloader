@@ -342,12 +342,12 @@ function Admin() {
                       Select Category
                     </option>
 
-                    <option>Finance</option>
-                    <option>Business</option>
-                    <option>Tools</option>
+                    <option>Marketing / Collection</option>
+                    <option>Credit Investigator</option>
+                    {/* <option>Tools</option>
                     <option>Games</option>
                     <option>Education</option>
-                    <option>Productivity</option>
+                    <option>Productivity</option> */}
 
                   </select>
 

@@ -2,11 +2,11 @@ function CategoryFilter({ category, setCategory }) {
 
   const categories = [
     "All",
-    "Finance",
-    "Games",
-    "Tools",
-    "Business",
-    "Education"
+    "Marketing / Collection",
+    "Credit Investigator",
+    // "Tools",
+    // "Business",
+    // "Education"
   ];
 
   return (

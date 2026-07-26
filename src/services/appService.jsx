@@ -103,3 +103,36 @@ export async function createApplication(app) {
     return data;
 
 }
+/**
+ * Increment download count
+ */
+export async function incrementDownload(id, currentCount) {
+
+    const { error } = await supabase
+        .from("apps")
+        .update({
+            download_count: currentCount + 1
+        })
+        .eq("id", id);
+
+    if (error)
+        throw error;
+}
+
+/**
+ * Refresh a single app
+ */
+export async function getApp(id) {
+
+    const { data, error } = await supabase
+        .from("apps")
+        .select("*")
+        .eq("id", id)
+        .single();
+
+    if (error)
+        throw error;
+
+    return data;
+
+}

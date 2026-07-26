@@ -9,7 +9,7 @@ function Footer() {
 
           <div className="col-md-6 mb-3">
             <h5 className="fw-bold">
-              📱 App Downloader
+              📱 Company App Downloader
             </h5>
 
             <p className="text-white-50 mb-0">
@@ -39,7 +39,7 @@ function Footer() {
             <h6 className="fw-bold">Contact</h6>
 
             <p className="text-white-50 mb-1">
-              support@appdownloader.com
+              barrerasteve032@gmail.com
             </p>
 
             <p className="text-white-50">

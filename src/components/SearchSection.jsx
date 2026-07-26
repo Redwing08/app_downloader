@@ -42,17 +42,17 @@ function SearchSection({
                                 All Categories
                             </option>
 
-                            <option>Finance</option>
+                            <option>Marketing / Collection</option>
 
-                            <option>Business</option>
+                            <option>Credit Investigator</option>
 
-                            <option>Tools</option>
+                            {/* <option>Tools</option>
 
                             <option>Games</option>
 
                             <option>Education</option>
 
-                            <option>Productivity</option>
+                            <option>Productivity</option> */}
 
                         </select>
 

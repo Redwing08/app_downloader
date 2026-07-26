@@ -27,11 +27,11 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/admin">
-                Admin
+                Uploader
               </Link>
-            </li>
+            </li> */}
 
           </ul>
         </div>
