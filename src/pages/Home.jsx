@@ -852,7 +852,7 @@ minHeight:"70px"
 <div className="card-footer bg-white border-0">
 
 
-{/* <button
+<button
 
 
 className="btn btn-primary w-100"
@@ -867,7 +867,7 @@ onClick={()=>downloadApp(app)}
 📥 Download APK
 
 
-</button> */}
+</button>
 
 
 
