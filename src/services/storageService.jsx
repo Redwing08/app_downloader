@@ -4,12 +4,19 @@ import { supabase } from "./supabase";
  * Upload a file to a Supabase Storage bucket
  * @param {string} bucket - Bucket name
  * @param {File} file - File to upload
+ * @param {number} [maxSizeMB=100] - Optional maximum file size in MB
  * @returns {string} Public URL
  */
-export async function uploadFile(bucket, file) {
-
+export async function uploadFile(bucket, file, maxSizeMB = 100) {
     if (!file) {
         throw new Error("No file selected.");
+    }
+
+    // Client-side file size validation (Default: 100 MB limit)
+    const maxSizeBytes = maxSizeMB * 1024 * 1024;
+    if (file.size > maxSizeBytes) {
+        const fileMB = (file.size / (1024 * 1024)).toFixed(2);
+        throw new Error(`File is too large (${fileMB} MB). Maximum allowed size is ${maxSizeMB} MB.`);
     }
 
     // Create unique filename
@@ -40,11 +47,9 @@ export async function uploadFile(bucket, file) {
  * @param {string} publicUrl - Public URL of the uploaded file
  */
 export async function deleteFile(bucket, publicUrl) {
-
     if (!publicUrl) return;
 
     try {
-
         // Extract filename from public URL
         const fileName = publicUrl.split("/").pop();
 
@@ -55,13 +60,9 @@ export async function deleteFile(bucket, publicUrl) {
         if (error) {
             console.error("Delete Error:", error);
         }
-
     } catch (err) {
-
         console.error("Delete Exception:", err);
-
     }
-
 }
 
 /**
@@ -74,7 +75,6 @@ export async function deleteFile(bucket, publicUrl) {
  * @returns {string} New public URL
  */
 export async function replaceFile(bucket, oldUrl, newFile) {
-
     if (!newFile) {
         return oldUrl;
     }
@@ -86,5 +86,4 @@ export async function replaceFile(bucket, oldUrl, newFile) {
     const newUrl = await uploadFile(bucket, newFile);
 
     return newUrl;
-
 }
