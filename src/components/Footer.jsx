@@ -52,7 +52,8 @@ function Footer() {
         <hr className="border-secondary" />
 
         <div className="text-center text-white-50">
-          © {year} App Downloader. All rights reserved.
+          © {year} Company
+           App Downloader. All rights reserved.
         </div>
 
       </div>

@@ -45,7 +45,7 @@ function SearchSection({
                             <option>Marketing / Collection</option>
 
                             <option>Credit Investigator</option>
-                            
+                             <option>Manager</option>
 
                             {/* <option>Tools</option>
 

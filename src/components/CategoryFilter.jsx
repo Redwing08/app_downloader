@@ -4,6 +4,7 @@ function CategoryFilter({ category, setCategory }) {
     "All",
     "Marketing / Collection",
     "Credit Investigator",
+    "Manager",,
     // "Tools",
     // "Business",
     // "Education"
